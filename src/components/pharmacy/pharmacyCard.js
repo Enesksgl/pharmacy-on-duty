@@ -1,19 +1,19 @@
 import React from "react";
-
+import "./pharmacyCard.css"
 export const PharmacyListComponent = (props) => {
-    const pharmacy=props.pharm;
-    const {setPharmacy} = props;
+  const pharmacy = props.pharm;
+  const { setPharmacy } = props;
   return (
-    <div class="card" style={{backgroundColor: "white"}}>
-  <h4 className="card-header">{pharmacy.eczaneAdi}</h4>
-  <div class="card-body">
-    <h5 class="card-title">{pharmacy.adres}</h5>
-    <p class="card-text">{pharmacy.tel}</p>
-    <button  onClick={()=>setPharmacy(pharmacy)}>
-         Haritada Göster
+    <div className="pharmacy_div">
+      <span className="pharmacy_name" >{pharmacy.eczaneAdi}</span>
+  
+        <span className="pharmacy_adres" >{pharmacy.adres}</span>
+        <span  className="pharmacy_tel">{pharmacy.tel}</span>
+        <button className="pharmacy_btn" onClick={() => setPharmacy(pharmacy)}>
+          Haritada Göster
         </button>
-  </div>
-</div>
+     
+    </div>
   );
 };
 

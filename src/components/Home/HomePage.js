@@ -47,7 +47,7 @@ function Home() {
   };
 
   return <div>
-    <div className="header" ><h7>Enes Köseoğlu 1191602019</h7> <button onClick={() => navigate("/adminPanel")}>AdminPanel</button> </div>
+    <div className="header" ><span>Enes Köseoğlu 1191602019</span> <button className="btn" onClick={() => navigate("/adminPanel")}>AdminPanel</button> </div>
 
     <div className="row body">
 
@@ -55,7 +55,7 @@ function Home() {
       <div className="home_column_right">
         <h1>Nöbetçi Eczane</h1>
         <select
-          className="ilce-select"
+          className="input"
           name="İlçe"
           placeholder="İlçe"
           value={ilce}
@@ -68,18 +68,18 @@ function Home() {
         </select>
         <input
           type="date"
-          className="ilce-select"
+          className="input"
           name="date"
           placeholder="Tarih"
           value={tarih}
           onChange={(e) => setTarih(e.target.value)}
         />
-        <button onClick={() => applyFilter(pharmacys)}>Filtrele</button>
+        <button className="btn" onClick={() => applyFilter(pharmacys)}>Filtrele</button>
         {filteredPharmacy.length === 0 ? (
           <div></div>
         ) : (
           <div style={{ width: "400px", height: "500px", overflow: "hidden", overflowY: "scroll" }}>
-            {filteredPharmacy.map((pharmacy) => <PharmacyListComponent pharm={pharmacy} setPharmacy={setPharmacy}>
+            {filteredPharmacy.map((pharmacy) => <PharmacyListComponent key = {pharmacy.id} pharm={pharmacy} setPharmacy={setPharmacy}>
             </PharmacyListComponent>)}
           </div>
         )}

@@ -7,20 +7,20 @@ export const LoginComponent = (props) => {
   return (
     <div className="login-div">
         <h1>Admin Girişi</h1>
-      <input
+      <input className="input"
         name="userName"
         placeholder="Kullanıcı Adı"
         value={userName}
         onChange={onChangeUserHandler}
       />
-      <input
+      <input  className="input"
         type="password"
         name="password"
         placeholder="Şifre"
         value={password}
         onChange={onChangeUserHandler}
       />
-      <button  onClick={onClick}>
+      <button className="btn"  onClick={onClick}>
           Giriş Yap
         </button>
     </div>

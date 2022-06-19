@@ -3,31 +3,31 @@ import { pharmacyData } from '../static_data'
 export const pharmacy = createSlice({
     name: 'pharmacy',
     initialState: {
-       
-       pharmacys : pharmacyData,
-    
+
+        pharmacys: pharmacyData,
+
     },
     reducers: {
-        addPharmacy: (state,action) => {
+        addPharmacy: (state, action) => {
             let arr = state.pharmacys;
-            arr.join(action.payload);
+            arr.push(action.payload.pharmacy);
             state.pharmacys = arr;
         },
-        
+
         addDuty: (state, action) => {
-            let arr = state.pharmacys;
-            console.log(action.payload[0])
-            console.log(action.payload[1])
-            arr.forEach(x=>{
-                if(x.id === action.payload[1]){
-                    x.nobetTarih.join(action.payload[0]);
+            let arr = state.pharmacys.map(x => {
+                if (x.id == action.payload.id) {
+                    let temp = { ...x }
+                    temp.nobetTarih.push(action.payload.tarih.toString());
+                    return temp;
                 }
+                return x;
             })
             state.pharmacys = arr;
         },
     }
 })
 
-export const { addPharmacy, addDuty } =pharmacy.actions
+export const { addPharmacy, addDuty } = pharmacy.actions
 
 export default pharmacy.reducer

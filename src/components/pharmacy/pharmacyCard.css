@@ -1,0 +1,48 @@
+.pharmacy_div{
+    display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px;
+  user-select: none;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  background-color: rgb(186, 154, 212) ;
+  border-radius: 30px;
+}
+ .pharmacy_name{
+     color: white;
+     font-size: 25px;
+     font-weight: 700;
+ }
+ .pharmacy_adres{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+.pharmacy_tel{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+.pharmacy_btn{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4a7dc9;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+
+  
+  .pharmacy_btn:hover {
+    background-color: #4CAF50;
+    color: white;
+  }

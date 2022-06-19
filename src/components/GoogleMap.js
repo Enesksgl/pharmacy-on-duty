@@ -22,12 +22,12 @@ const GoogleMap = (props) => {
   };
   
     return (
-      <div style={{ height: '90vh', width: '90%' }}>
+      <div style={{ height: '75vh', width: '90%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDy9eRYpa7luz3gC3-MrT-psHyHmaKSbWw" }}
           defaultCenter={defaultProps.center}
           defaultZoom={defaultProps.zoom}
-         
+          center={{lat :pharmacy.lat, lng :pharmacy.lng}}
         >
           <MarkerComponent
             lat={pharmacy.lat}

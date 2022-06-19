@@ -2,10 +2,12 @@
     background-color: #282c34;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    height: 5vh;
     justify-content: space-between;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 10px;
 }
 
 .home_column_left {
@@ -19,9 +21,14 @@
   }
   
 .body {
-    width: auto;
-    height: auto;
-    overflow:auto;
-    margin: 30px;
-    background-color: gainsboro;
+  
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  user-select: none;
+  margin: 30px;
+  background-color: rgb(190, 212, 154);
+  border-radius: 30px;
   } 
